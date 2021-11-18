@@ -1,0 +1,39 @@
+{
+  "macroSet" : [ {
+    "id" : 1,
+    "name" : "GLOBAL",
+    "macros" : {
+      "macro" : [{
+        "id" : 1,
+        "name" : "TEST_BASE",
+        "value" : "",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 2,
+        "name" : "SRC",
+        "value" : "$(TEST_BASE)src/main/data",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 3,
+        "name" : "TRG",
+        "value" : "$(TEST_BASE)target/runtime/data",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 4,
+        "name" : "LOG",
+        "value" : "$(TEST_BASE)target/runtime/logs",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 5,
+        "name": "ARTIFACTS",
+        "value" : "$(TEST_BASE)target/runtime/artifacts",
+        "encrypteValue": false,
+        "description" : "Where to save artifacts created by the samples"
+      } ]
+    }
+  } ]
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--======  Transformation XML ======-->
+<!-- <!DOCTYPE Transformation SYSTEM "DJMap.dtd"> -->
+<Transformation schemaVersion = "1.2" version = "1.1" creator = "ACTIAN\wbunton" datecreated = "2021-08-23T07:16:45.636532-06:00" author = "ACTIAN\wbunton" datemodified = "2021-08-23T07:18:19.673-06:00" partial = "no">
+  <LogManager loglocation = "$(LOG)/AccountsExample.log" messagetypemask = "15"/>
+  <ProfileManager enabled = "False" outputfile = "" filter = "-1"/>
+  <MacroManager>
+    <MacroSets>
+      <MacroSet name = "GLOBAL"/>
+    </MacroSets>
+  </MacroManager>
+  <TransformationOptions>
+    <Option name = "truncationhandling" value = "2"/>
+    <Option name = "overflowhandling" value = "2"/>
+    <Option name = "nonullshandling" value = "2"/>
+    <Option name = "maxerrorcount" value = "1"/>
+    <Option name = "logfieldcount" value = "3"/>
+    <Option name = "clearlogbeforerun" value = "yes"/>
+  </TransformationOptions>
+  <TransformationSources>
+    <TransformationSource name = "TransformationSource1" connectorname = "ASCII (Delimited)">
+      <TransformationSourceOptions>
+        <Option name = "codepage" value = "ANSI"/>
+        <Option name = "recsep" value = "CR-LF"/>
+        <Option name = "fieldcount" value = "0"/>
+        <Option name = "fldsep" value = ","/>
+        <Option name = "fldsdelim" value = "&quot;"/>
+        <Option name = "fldedelim" value = "&quot;"/>
+        <Option name = "header" value = "True"/>
+        <Option name = "altfldsep" value = "None"/>
+        <Option name = "soffset" value = "0"/>
+        <Option name = "autostyle" value = "False"/>
+        <Option name = "stylesamplesize" value = "5000"/>
+        <Option name = "lstrip" value = "False"/>
+        <Option name = "tstrip" value = "False"/>
+        <Option name = "field1isrectypeid" value = "False"/>
+        <Option name = "nullind" value = "none"/>
+        <Option name = "emptyfieldsnull" value = "False"/>
+        <Option name = "numericformatnormalization" value = "False"/>
+        <Option name = "layoutmismatch" value = "2"/>
+      </TransformationSourceOptions>
+      <DataAccess>
+        <ConnectionInfo>
+          <ResMgrSession name = "RMSession1" type = "ASCII (Delimited)"/>
+          <ConnectionDetail location = "$(SRC)/Accounts.txt"/>
+        </ConnectionInfo>
+        <SampleInfo type = "All"/>
+        <DataAccessOptions>
+          <Option name = "filterrecordlimit" value = "2147483647"/>
+          <Option name = "sortduplicaterecordsallowed" value = "True"/>
+        </DataAccessOptions>
+      </DataAccess>
+    </TransformationSource>
+  </TransformationSources>
+  <TransformationTargets>
+    <TransformationTarget name = "TransformationTarget1" connectorname = "ASCII (Fixed)" outputmode = "Replace" updatemode = "UpdateEvery" updatewithnullfields = "no" replacefullrecord = "yes">
+      <TransformationTargetOptions>
+        <Option name = "codepage" value = "ANSI"/>
+        <Option name = "recsep" value = "CR-LF"/>
+        <Option name = "tabex" value = "0"/>
+        <Option name = "datatypes" value = "standard"/>
+        <Option name = "ragged" value = "False"/>
+        <Option name = "fillfields" value = "True"/>
+        <Option name = "fldsep" value = "None"/>
+        <Option name = "updateaddmismatch" value = "True"/>
+        <Option name = "layoutmismatch" value = "0"/>
+        <Option name = "recordrepetitioncount" value = "0"/>
+      </TransformationTargetOptions>
+      <DataAccess>
+        <ConnectionInfo>
+          <ResMgrSession name = "RMSession1" type = "ASCII (Fixed)"/>
+          <ConnectionDetail location = "$(TRG)/AccountsExample9.asc"/>
+        </ConnectionInfo>
+        <SampleInfo type = "All"/>
+        <DataAccessOptions>
+          <Option name = "filterrecordlimit" value = "2147483647"/>
+        </DataAccessOptions>
+      </DataAccess>
+    </TransformationTarget>
+  </TransformationTargets>
+  <TransformationMap mapname = "AccountsExample.map.xml" originallocation = "C:\Work\dostest"/>
+</Transformation>

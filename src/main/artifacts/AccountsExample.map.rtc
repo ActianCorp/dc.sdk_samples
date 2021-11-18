@@ -1,0 +1,440 @@
+{
+  "name" : "AccountsExample",
+  "description" : "",
+  "entryPoint" : "AccountsExample.map",
+  "logLevel" : "INFO",
+  "logfileName" : "$(LOG)/AccountsExample.log",
+  "flushLog" : false,
+  "clearLog" : true,
+  "macroSetNames" : [ ],
+  "profiling" : false,
+  "inMessages" : [ ],
+  "transformOptions" : {
+    "nullOption" : "ERROR",
+    "truncationOption" : "ERROR",
+    "overflowOption" : "ERROR"
+  },
+  "datasetConfigs" : {
+    "namedDatasets" : [ {
+      "name" : "SOURCE_1",
+      "schemaMismatchOption" : "error",
+      "dataset" : {
+        "session_info" : {
+          "type" : "source",
+          "connector" : "ASCII (Delimited)"
+        },
+        "connect_info" : {
+          "parts" : [ {
+            "name" : "file",
+            "value" : "$(SRC)/Accounts.txt"
+          } ],
+          "properties" : [ {
+            "name" : "codepage",
+            "value" : "ANSI"
+          }, {
+            "name" : "recsep",
+            "value" : "CR-LF"
+          }, {
+            "name" : "fieldcount",
+            "value" : "0"
+          }, {
+            "name" : "fldsep",
+            "value" : ","
+          }, {
+            "name" : "fldsdelim",
+            "value" : "\""
+          }, {
+            "name" : "fldedelim",
+            "value" : "\""
+          }, {
+            "name" : "header",
+            "value" : "True"
+          }, {
+            "name" : "altfldsep",
+            "value" : "None"
+          }, {
+            "name" : "soffset",
+            "value" : "0"
+          }, {
+            "name" : "autostyle",
+            "value" : "False"
+          }, {
+            "name" : "stylesamplesize",
+            "value" : "5000"
+          }, {
+            "name" : "lstrip",
+            "value" : "False"
+          }, {
+            "name" : "tstrip",
+            "value" : "False"
+          }, {
+            "name" : "field1isrectypeid",
+            "value" : "False"
+          }, {
+            "name" : "nullind",
+            "value" : "none"
+          }, {
+            "name" : "emptyfieldsnull",
+            "value" : "False"
+          }, {
+            "name" : "numericformatnormalization",
+            "value" : "False"
+          } ]
+        },
+        "schema_info" : {
+          "schema" : {
+            "ui" : {
+              "session_info" : {
+                "type" : "source",
+                "connector" : "ASCII (Delimited)"
+              },
+              "connect_info" : {
+                "parts" : [ {
+                  "name" : "file",
+                  "value" : "C:\\Work\\v11\\dc.sdk_samples\\src\\main\\data\\Accounts.txt"
+                } ],
+                "properties" : [ {
+                  "name" : "header",
+                  "value" : "True"
+                } ]
+              }
+            },
+            "connector" : "ASCII (Delimited)",
+            "root_defs" : [ {
+              "name" : "DocumentRoot",
+              "choice" : [ {
+                "name" : "R1",
+                "rec_type_ref" : "R1"
+              } ]
+            } ],
+            "type_defs" : [ {
+              "name" : "R1",
+              "groups" : [ {
+                "name" : "R1",
+                "sequence" : [ {
+                  "name" : "Account Number",
+                  "type" : "string",
+                  "length" : 9,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Name",
+                  "type" : "string",
+                  "length" : 21,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Company",
+                  "type" : "string",
+                  "length" : 31,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Street",
+                  "type" : "string",
+                  "length" : 35,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "City",
+                  "type" : "string",
+                  "length" : 16,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "State",
+                  "type" : "string",
+                  "length" : 2,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Zip",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Email",
+                  "type" : "string",
+                  "length" : 25,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Birth Date",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Favorites",
+                  "type" : "string",
+                  "length" : 11,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Standard Payment",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Payments",
+                  "type" : "string",
+                  "length" : 7,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "Balance",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                } ]
+              } ]
+            } ],
+            "rule_defs" : { },
+            "artifact_metadata" : { },
+            "designed_for" : "source"
+          }
+        },
+        "sample_info" : {
+          "type" : "All",
+          "start" : 0,
+          "end" : 0
+        }
+      }
+    }, {
+      "name" : "TARGET_1",
+      "schemaMismatchOption" : "error",
+      "dataset" : {
+        "session_info" : {
+          "type" : "target",
+          "connector" : "ASCII (Fixed)"
+        },
+        "connect_info" : {
+          "parts" : [ {
+            "name" : "file",
+            "value" : "$(TRG)/AccountsExample.asc"
+          }, {
+            "name" : "outputmode",
+            "value" : "REPLACE"
+          } ],
+          "properties" : [ {
+            "name" : "codepage",
+            "value" : "ANSI"
+          }, {
+            "name" : "recsep",
+            "value" : "CR-LF"
+          }, {
+            "name" : "tabex",
+            "value" : "0"
+          }, {
+            "name" : "datatypes",
+            "value" : "standard"
+          }, {
+            "name" : "ragged",
+            "value" : "False"
+          }, {
+            "name" : "fillfields",
+            "value" : "True"
+          }, {
+            "name" : "fldsep",
+            "value" : "None"
+          } ]
+        },
+        "schema_info" : {
+          "schema" : {
+            "ui" : {
+              "session_info" : {
+                "type" : "source",
+                "connector" : "ASCII (Delimited)"
+              },
+              "connect_info" : {
+                "parts" : [ {
+                  "name" : "file",
+                  "value" : "C:\\Work\\v11\\dc.sdk_samples\\src\\main\\data\\Accounts.txt"
+                } ],
+                "properties" : [ {
+                  "name" : "header",
+                  "value" : "True"
+                } ]
+              }
+            },
+            "connector" : "ASCII (Delimited)",
+            "root_defs" : [ {
+              "name" : "DocumentRoot",
+              "choice" : [ {
+                "name" : "R1",
+                "rec_type_ref" : "R1"
+              } ]
+            } ],
+            "type_defs" : [ {
+              "name" : "R1",
+              "origin" : {
+                "type" : 2,
+                "adaptor" : "ASCII (Delimited)",
+                "connect_string" : "File=C:\\Work\\v11\\dc.sdk_samples\\src\\main\\data\\Accounts.txt;header=True",
+                "record_type" : "R1"
+              },
+              "groups" : [ {
+                "name" : "R1",
+                "sequence" : [ {
+                  "name" : "Account Number",
+                  "type" : "string",
+                  "length" : 9,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Name",
+                  "type" : "string",
+                  "length" : 21,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Company",
+                  "type" : "string",
+                  "length" : 31,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Street",
+                  "type" : "string",
+                  "length" : 35,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "City",
+                  "type" : "string",
+                  "length" : 16,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "State",
+                  "type" : "string",
+                  "length" : 2,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Zip",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Email",
+                  "type" : "string",
+                  "length" : 25,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Birth Date",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Favorites",
+                  "type" : "string",
+                  "length" : 11,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Standard Payment",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Payments",
+                  "type" : "string",
+                  "length" : 7,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Balance",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                } ]
+              } ]
+            } ],
+            "rule_defs" : { },
+            "artifact_metadata" : { },
+            "designed_for" : "source"
+          }
+        },
+        "sample_info" : {
+          "type" : "All",
+          "start" : 0,
+          "end" : 0
+        }
+      }
+    } ],
+    "namedSessions" : [ ]
+  },
+  "outMessageNames" : [ ],
+  "macroDefinitions" : [ ],
+  "profile_mask" : 65535,
+  "profile_output_file" : "profile.out",
+  "artifact_metadata" : {
+    "description" : "",
+    "creator" : "ACTIAN\\wbunton",
+    "author" : "ACTIAN\\wbunton",
+    "version" : "1.0",
+    "date_created" : "2021-07-21T11:32:52.365012-06:00",
+    "date_modified" : "2021-07-21T11:32:52.365012-06:00"
+  }
+}

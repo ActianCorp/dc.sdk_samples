@@ -1,0 +1,62 @@
+{
+  "steps" : [ {
+    "name" : "Start",
+    "type" : "Start",
+    "description" : "",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 77,
+    "y" : 145,
+    "z" : 0,
+    "script" : "",
+    "expression" : ""
+  }, {
+    "name" : "Stop",
+    "type" : "Stop",
+    "description" : "",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 404,
+    "y" : 145,
+    "z" : 0,
+    "script" : "",
+    "expression" : ""
+  }, {
+    "name" : "Scripting_1",
+    "type" : "Script",
+    "description" : "",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 239,
+    "y" : 239,
+    "z" : 0,
+    "script" : "",
+    "expression" : "LogMessage(\"INFO\", \"This is logged from the simple process example\")"
+  } ],
+  "links" : [ {
+    "source" : "Start",
+    "target" : "Scripting_1",
+    "data" : "77,145 239,239"
+  }, {
+    "source" : "Scripting_1",
+    "target" : "Stop",
+    "data" : "239,239 404,145"
+  } ],
+  "maxThreads" : 1,
+  "breakOnFirstError" : true,
+  "logMask" : 11,
+  "artifact_metadata" : {
+    "description" : "",
+    "creator" : "ACTIAN\\wbunton",
+    "author" : "ACTIAN\\wbunton",
+    "version" : "1.1",
+    "date_created" : "2021-07-22T04:47:07.770892-06:00",
+    "date_modified" : "2021-07-22T04:56:02.795-06:00"
+  },
+  "ui" : {
+    "paletteX" : 0,
+    "paletteY" : 0,
+    "dividerY" : 0,
+    "zoom" : 100
+  }
+}

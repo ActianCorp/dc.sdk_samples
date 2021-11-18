@@ -1,0 +1,29 @@
+{
+  "entryPoint" : "SimpleProcessSample.process",
+  "logLevel" : "INFO",
+  "logfileName" : "$(LOG)/SimpleProcess.log",
+  "flushLog" : false,
+  "clearLog" : false,
+  "isLogging" : true,
+  "useEventLog" : false,
+  "macroSetNames" : [ ],
+  "profiling" : false,
+  "inMessages" : [ ],
+  "transformOptions" : { },
+  "macroDefinitions" : [ ],
+  "outMessageNames" : [ ],
+  "datasetConfigs" : {
+    "namedDatasets" : [ ],
+    "namedSessions" : [ ]
+  },
+  "profile_mask" : 65535,
+  "profile_output_file" : "C:\\Work\\dostest\\Execution Profiles\\profile.out",
+  "artifact_metadata" : {
+    "description" : "",
+    "creator" : "ACTIAN\\wbunton",
+    "author" : "ACTIAN\\wbunton",
+    "version" : "1.1",
+    "date_created" : "2021-07-22T04:47:07.770892-06:00",
+    "date_modified" : "2021-07-22T04:56:02.795-06:00"
+  }
+}
