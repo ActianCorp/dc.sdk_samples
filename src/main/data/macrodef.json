@@ -12,25 +12,25 @@
       }, {
         "id" : 2,
         "name" : "SRC",
-        "value" : "$(TEST_BASE)src/main/data",
+        "value" : "$(TEST_BASE)target/runtime/data",
         "encryptValue" : false,
         "description" : ""
       }, {
         "id" : 3,
         "name" : "TRG",
-        "value" : "$(TEST_BASE)target/runtime/data",
+        "value" : "$(TEST_BASE)target/runtime/output/data",
         "encryptValue" : false,
         "description" : ""
       }, {
         "id" : 4,
         "name" : "LOG",
-        "value" : "$(TEST_BASE)target/runtime/logs",
+        "value" : "$(TEST_BASE)target/runtime/output/logs",
         "encryptValue" : false,
         "description" : ""
       }, {
         "id" : 5,
         "name": "ARTIFACTS",
-        "value" : "$(TEST_BASE)target/runtime/artifacts",
+        "value" : "$(TEST_BASE)target/runtime/output/artifacts",
         "encrypteValue": false,
         "description" : "Where to save artifacts created by the samples"
       } ]

@@ -1,0 +1,404 @@
+{
+  "map" : {
+    "sources" : [ {
+      "name" : "SOURCE_1",
+      "description" : "",
+      "properties" : [ {
+        "name" : "schema_mismatch",
+        "value" : "error"
+      } ],
+      "control_links" : [ {
+        "src_path" : "/SOURCE_1/R1",
+        "trg_paths" : [ {
+          "rules" : [ {
+            "condition" : "",
+            "if_actions" : [ {
+              "parameters" : [ {
+                "name" : "preserve",
+                "value" : "False"
+              }, {
+                "name" : "count_expression",
+                "value" : ""
+              } ],
+              "name" : "OutputRecord"
+            } ],
+            "map_event" : {
+              "name" : "RecordStarted"
+            }
+          } ],
+          "trg_path" : "/TARGET_1/R1"
+        } ]
+      } ],
+      "schema" : {
+        "ui" : {
+          "session_info" : {
+            "type" : "source",
+            "connector" : "ASCII (Delimited)"
+          },
+          "connect_info" : {
+            "parts" : [ {
+              "name" : "file",
+              "value" : "C:\\Work\\v11\\dc.sdk_samples\\src\\main\\data\\Accounts.txt"
+            } ],
+            "properties" : [ {
+              "name" : "header",
+              "value" : "True"
+            } ]
+          }
+        },
+        "connector" : "ASCII (Delimited)",
+        "root_defs" : [ {
+          "name" : "DocumentRoot",
+          "choice" : [ {
+            "name" : "R1",
+            "rec_type_ref" : "R1"
+          } ]
+        } ],
+        "type_defs" : [ {
+          "name" : "R1",
+          "groups" : [ {
+            "name" : "R1",
+            "sequence" : [ {
+              "name" : "Account Number",
+              "type" : "string",
+              "length" : 9,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "length" : 21,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Company",
+              "type" : "string",
+              "length" : 31,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Street",
+              "type" : "string",
+              "length" : 35,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "length" : 16,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "length" : 2,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Zip",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Email",
+              "type" : "string",
+              "length" : 25,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Birth Date",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Favorites",
+              "type" : "string",
+              "length" : 11,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Standard Payment",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Payments",
+              "type" : "string",
+              "length" : 7,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "Balance",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text"
+              }
+            } ]
+          } ]
+        } ],
+        "rule_defs" : { },
+        "artifact_metadata" : { },
+        "designed_for" : "source"
+      }
+    } ],
+    "targets" : [ {
+      "name" : "TARGET_1",
+      "description" : "",
+      "properties" : [ {
+        "name" : "multimode_target",
+        "value" : "false"
+      }, {
+        "name" : "schema_mismatch",
+        "value" : "error"
+      } ],
+      "schema" : {
+        "ui" : {
+          "session_info" : {
+            "type" : "source",
+            "connector" : "ASCII (Delimited)"
+          },
+          "connect_info" : {
+            "parts" : [ {
+              "name" : "file",
+              "value" : "C:\\Work\\v11\\dc.sdk_samples\\src\\main\\data\\Accounts.txt"
+            } ],
+            "properties" : [ {
+              "name" : "header",
+              "value" : "True"
+            } ]
+          }
+        },
+        "connector" : "ASCII (Delimited)",
+        "root_defs" : [ {
+          "name" : "DocumentRoot",
+          "choice" : [ {
+            "name" : "R1",
+            "rec_type_ref" : "R1"
+          } ]
+        } ],
+        "type_defs" : [ {
+          "name" : "R1",
+          "origin" : {
+            "type" : 2,
+            "adaptor" : "ASCII (Delimited)",
+            "connect_string" : "File=C:\\Work\\v11\\dc.sdk_samples\\src\\main\\data\\Accounts.txt;header=True",
+            "record_type" : "R1"
+          },
+          "groups" : [ {
+            "name" : "R1",
+            "sequence" : [ {
+              "name" : "Account Number",
+              "type" : "string",
+              "length" : 9,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "length" : 21,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Company",
+              "type" : "string",
+              "length" : 31,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Street",
+              "type" : "string",
+              "length" : 35,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "length" : 16,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "State",
+              "type" : "string",
+              "length" : 2,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Zip",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Email",
+              "type" : "string",
+              "length" : 25,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Birth Date",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Favorites",
+              "type" : "string",
+              "length" : 11,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Standard Payment",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Payments",
+              "type" : "string",
+              "length" : 7,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Balance",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            } ]
+          } ]
+        } ],
+        "rule_defs" : { },
+        "artifact_metadata" : { },
+        "designed_for" : "source"
+      },
+      "map_rules" : {
+        "data_links" : [ {
+          "src_path" : "/SOURCE_1/R1/Account Number",
+          "trg_path" : "/TARGET_1/R1/Account Number",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Name",
+          "trg_path" : "/TARGET_1/R1/Name",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Company",
+          "trg_path" : "/TARGET_1/R1/Company",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Street",
+          "trg_path" : "/TARGET_1/R1/Street",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/City",
+          "trg_path" : "/TARGET_1/R1/City",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/State",
+          "trg_path" : "/TARGET_1/R1/State",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Zip",
+          "trg_path" : "/TARGET_1/R1/Zip",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Email",
+          "trg_path" : "/TARGET_1/R1/Email",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Birth Date",
+          "trg_path" : "/TARGET_1/R1/Birth Date",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Favorites",
+          "trg_path" : "/TARGET_1/R1/Favorites",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Standard Payment",
+          "trg_path" : "/TARGET_1/R1/Standard Payment",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Payments",
+          "trg_path" : "/TARGET_1/R1/Payments",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/Balance",
+          "trg_path" : "/TARGET_1/R1/Balance",
+          "ui_generated" : false
+        } ]
+      }
+    } ],
+    "execution_options" : [ {
+      "name" : "overflow",
+      "value" : "error"
+    }, {
+      "name" : "truncation",
+      "value" : "error"
+    }, {
+      "name" : "nulls",
+      "value" : "error"
+    } ],
+    "artifact_metadata" : {
+      "description" : "",
+      "creator" : "ACTIAN\\wbunton",
+      "author" : "ACTIAN\\wbunton",
+      "version" : "1.0",
+      "date_created" : "2021-07-21T11:32:52.365012-06:00",
+      "date_modified" : "2021-07-21T11:32:52.365012-06:00"
+    }
+  }
+}
