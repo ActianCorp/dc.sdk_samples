@@ -70,6 +70,8 @@ pom.xml:  Maven build script
 src/main/artifacts:
   AccountsExample.map: Simple transformation used to demonstrate loading and running a transformation 
   AccountsExample.map.rtc:  Runtime configuration used to configure and run AccountsExample.map
+  AccountsExample.map.xml: Simple V9 transformation used to demonstrate loading and running a transformation 
+  AccountsExample.tf.xml:  Runtime configuration used to configure and run AccountsExample.map
   SimpleProcessSample.process: A simple process used to demonstrate loading and running a process
   SimpleProcessSample.process.rtc: Runtime configuration used to configure and run SimpleProcessSample.process
 src/main/assemblies:
@@ -92,6 +94,7 @@ src/main/java/com/actian/dc/sdk/samples:
   MapWithEventsAndRejectsSample.java: Creates, saves and executes a more complex transformation (multiple targets, and none-default events/actions)
   IntermediateTargetAndSchemasSample.java: Creates an extenral schema, then uses it in a complex transformation using a lookup intermediate target
   SchemaBuilder.java: Class used by IntermediateTargetAndSchemasSample to create the external schema
+  WorkingWithDatatypesSample.java: Demonstrates how to manipulate datatypes
   CreateSimpleProcessSample.java: Creates, saves and executes a simple process
   ProcessWithTransformationSample.java: Creates, saves and executes a simple process that runs a transformation in a transformation step
   ProcessWithAlternateTransformationSample.java: Creates, saves and executes a simple process that runs a V9 transformation in an alternate transformation step
@@ -108,7 +111,7 @@ Paid plans are also available at [Actian Support Services](https://www.actian.co
 ---
 ## Contributing
 
-Actian Corporation welcomes contributions to the DataConnect Client SDK Samples project.  To contribute, please follow these steps:
+Actian Corporation welcomes contributions to the DataConnect SDK Samples project.  To contribute, please follow these steps:
 
 * When submitting your pull request, please provide full contact info (Name, company, email, phone)
 * Submit your pull request to the dev branch. We will review and test the requested change.  

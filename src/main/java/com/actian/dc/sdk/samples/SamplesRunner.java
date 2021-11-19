@@ -36,10 +36,10 @@ import java.util.logging.Logger;
 import static com.actian.di.designsdk.ArtifactVersion.V10;
 
 public class SamplesRunner {
-    static final String macrosFile = "src/main/data/macrodef.json";
+    static final String macrosFile = "target/runtime/data/macrodef.json";
 
     // Where to find the pre-defined artifacts included with the samples
-    static final String artifactsPath = new File("src/main/artifacts").getAbsolutePath();
+    static final String artifactsPath = new File("target/runtime/artifacts").getAbsolutePath();
 
     private static final Logger logger = LogUtil.getLogger(MethodHandles.lookup().lookupClass());
 
