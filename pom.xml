@@ -4,7 +4,7 @@
     <groupId>com.actian.di</groupId>
     <artifactId>dc-sdk-samples</artifactId>
     <packaging>jar</packaging>
-    <version>12.0.0-13</version>
+    <version>12.0.0-27</version>
     <name>DataConnect Design SDK Samples</name>
     <url>http://www.actian.com</url>
     <repositories>
@@ -23,8 +23,8 @@
     </repositories>
     <properties>
         <sample.to.run></sample.to.run>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
