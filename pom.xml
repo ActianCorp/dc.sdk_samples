@@ -4,8 +4,8 @@
     <groupId>com.actian.di</groupId>
     <artifactId>dc-sdk-samples</artifactId>
     <packaging>jar</packaging>
-    <version>12.0.0-31</version>
-    <name>DataConnect Design SDK Samples</name>
+    <version>12.1.0-9</version>
+    <name>DataConnect SDK Samples</name>
     <url>http://www.actian.com</url>
     <repositories>
         <repository>
